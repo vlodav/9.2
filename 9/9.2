@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+void calculateTrapezoidCharacteristics(double a, double b, double h, double& perimeter, double& area)
+{
+    perimeter = a + b + 2 * h;
+    area = 0.5 * (a + b) * h;
+}
+
+int main()
+{
+    system("chcp 1251");
+    int kolvo = 2;
+    int kolvo2 = 1;
+
+    while (kolvo2 <= kolvo)
+    {
+        cout << "Трапеция " << kolvo2 << endl;
+
+        double a, b, h;
+        double perimeter, area;
+
+        cout << "Введите сторону 'a': ";
+        cin >> a;
+
+        cout << "Введите сторону 'b': ";
+        cin >> b;
+
+        cout << "Введите высоту 'h': ";
+        cin >> h;
+
+        calculateTrapezoidCharacteristics(a, b, h, perimeter, area);
+
+        cout << "Характеристики " << kolvo2 << " трапеции: " << endl;
+        cout << "Периметр: " << perimeter << endl;
+        cout << "Площадь: " << area << endl;
+        cout << endl;
+        kolvo2++;
+    }
+
+    return 0;
+}
